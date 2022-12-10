@@ -21,24 +21,46 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-nav {
-  background: dodgerblue;
+header {
   color: #ddd;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 }
-nav ul {
+header ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
-nav ul a {
+header ul a {
   text-decoration: none;
   color: inherit;
   padding: 1em;
   display: block;
+  transition: background-color 200ms ease;
+}
+header ul a:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.contact {
+  background: rgb(26, 116, 255);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.contact > * {
+  padding: 0.5em;
+}
+
+.main-nav {
+  background: dodgerblue;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo img {
+  max-height: 56px;
 }
 
 section {
