@@ -22,25 +22,12 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-  color: #ddd;
+  color: #eee;
   display: flex;
   flex-direction: column;
-}
-header ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-header ul a {
-  text-decoration: none;
-  color: inherit;
-  padding: 1em;
-  display: block;
-  transition: background-color 200ms ease;
-}
-header ul a:hover {
-  background: rgba(0, 0, 0, 0.6);
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 .contact {
@@ -54,9 +41,27 @@ header ul a:hover {
 }
 
 .main-nav {
-  background: dodgerblue;
+  background: white;
+  color: #222;
   display: flex;
   justify-content: space-between;
+}
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.main-nav ul a {
+  text-decoration: none;
+  color: inherit;
+  padding: 1em;
+  display: block;
+  transition: background-color 200ms ease;
+}
+.main-nav ul a:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
 }
 
 .logo img {
@@ -69,7 +74,7 @@ section {
 
 .hero {
   padding: 2em;
-  color: white;
+  color: #eee;
   min-height: 100vh;
   position: relative;
 }
@@ -87,6 +92,16 @@ section {
   background-image: url(../assets/herobackground.jpg);
   background-size: cover;
   background-position: center;
+}
+
+.hero-content {
+  max-width: 75ch;
+}
+
+footer {
+  background: #222;
+  color: #eee;
+  padding: 2em;
 }
 
 /*# sourceMappingURL=style.css.map */
