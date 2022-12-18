@@ -1,9 +1,31 @@
-@use 'resets';
+@use 'resets'; 
+@use 'variables' as var;
 
 header{
-  color: #ddd;
+  color: var.$font-color;
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.contact{
+  background: rgb(26, 116, 255);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  & > *{
+    padding: .5em;
+  }
+}
+
+.main-nav{
+  background: white;
+  color: var.$font-color--dark;
+  display: flex;
+  justify-content: space-between;
 
   ul{
     list-style: none;
@@ -19,28 +41,11 @@ header{
       transition: background-color 200ms ease;
 
       &:hover{
-        background: rgb(0, 0, 0, .6);
+        background: rgb(0, 0, 0, .8);
+        color: white;
       }
     }
   }
-
-}
-
-.contact{
-  background: rgb(26, 116, 255);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  & > *{
-    padding: .5em;
-  }
-}
-
-.main-nav{
-  background: dodgerblue;
-  display: flex;
-  justify-content: space-between;
 }
 
 .logo img{
@@ -53,7 +58,7 @@ section{
 
 .hero{
   padding: 2em;
-  color: white;
+  color:  var.$font-color;
   min-height: 100vh;
   position: relative;
 
@@ -73,4 +78,14 @@ section{
   background-image: url(../assets/herobackground.jpg);
   background-size: cover;
   background-position: center;
+}
+
+.hero-content{
+  max-width: 75ch;
+}
+
+footer{
+  background: #222;
+  color: var.$font-color;
+  padding: 2em;
 }
