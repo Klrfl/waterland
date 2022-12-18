@@ -98,6 +98,10 @@ section {
   max-width: 75ch;
 }
 
+.main-section {
+  padding: 2em;
+}
+
 footer {
   background: #222;
   color: #eee;
