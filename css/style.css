@@ -45,6 +45,7 @@ header {
   color: #222;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .main-nav ul {
   list-style: none;
@@ -68,10 +69,20 @@ header {
   max-height: 56px;
 }
 
-section {
-  overflow: hidden;
+@media screen and (max-width: 50em) {
+  #nav-links-container {
+    backdrop-filter: blur(1rem);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #nav-links-container ul {
+    min-width: 75vw;
+    min-height: 100vh;
+    flex-direction: column;
+  }
 }
-
 .hero {
   padding: 2em;
   color: #eee;
@@ -98,13 +109,17 @@ section {
   max-width: 75ch;
 }
 
-.main-section {
-  padding: 2em;
-}
-
 footer {
   background: #222;
   color: #eee;
+  padding: 2em;
+}
+
+section {
+  overflow: hidden;
+}
+
+.main-section {
   padding: 2em;
 }
 
