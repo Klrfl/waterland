@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+
+.hero{
+  padding: 2em;
+  color:  $font-color;
+  min-height: 100vh;
+  position: relative;
+
+  h1{
+    font-size: 3rem;
+  }
+}
+
+.hero::before{
+  content: '';
+  z-index: -1;
+  
+  position: absolute;
+  inset: 0;
+  filter: brightness(.4);
+  background-color: rgb(0, 0, 0, .5);
+  background-image: url(../assets/herobackground.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content{
+  max-width: 75ch;
+}

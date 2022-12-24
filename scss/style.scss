@@ -1,95 +1,9 @@
-@use 'resets'; 
-@use 'variables' as var;
-
-header{
-  color: var.$font-color;
-  display: flex;
-  flex-direction: column;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-
-.contact{
-  background: rgb(26, 116, 255);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  & > *{
-    padding: .5em;
-  }
-}
-
-.main-nav{
-  background: white;
-  color: var.$font-color--dark;
-  display: flex;
-  justify-content: space-between;
-
-  ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    
-    a{
-      text-decoration: none;
-      color: inherit;
-      padding: 1em;
-      display: block;
-      transition: background-color 200ms ease;
-
-      &:hover{
-        background: rgb(0, 0, 0, .8);
-        color: white;
-      }
-    }
-  }
-}
-
-.logo img{
-  max-height: 56px;
-}
+@use '../scss/components';
 
 section{
   overflow: hidden;
 }
 
-.hero{
-  padding: 2em;
-  color:  var.$font-color;
-  min-height: 100vh;
-  position: relative;
-
-  h1{
-    font-size: 3rem;
-  }
-}
-
-.hero::before{
-  content: '';
-  z-index: -1;
-  
-  position: absolute;
-  inset: 0;
-  filter: brightness(.4);
-  background-color: rgb(0, 0, 0, .5);
-  background-image: url(../assets/herobackground.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.hero-content{
-  max-width: 75ch;
-}
-
 .main-section{
-  padding: 2em;
-}
-
-footer{
-  background: #222;
-  color: var.$font-color;
   padding: 2em;
 }
