@@ -17,8 +17,19 @@ input, button, textarea, select {
   font: inherit;
 }
 
+button {
+  all: unset;
+  cursor: pointer;
+}
+
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+}
+
+#overlay {
+  backdrop-filter: blur(1rem);
+  position: absolute;
+  inset: 0;
 }
 
 header {
@@ -65,22 +76,46 @@ header {
   color: white;
 }
 
+#open-navbar, #close-navbar {
+  padding: 1em;
+  display: none;
+}
+
+#open-navbar:hover,
+#close-navbar:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: #eee;
+}
+
 .logo img {
   max-height: 56px;
 }
 
-@media screen and (max-width: 50em) {
+@media screen and (max-width: 40em) {
   #nav-links-container {
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(1rem);
-    color: white;
+    color: #eee;
+    z-index: 5;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 200ms ease;
   }
   #nav-links-container ul {
     min-width: 75vw;
     min-height: 100vh;
     flex-direction: column;
+  }
+  #nav-links-container.active {
+    transform: translateX(0);
+  }
+  #open-navbar, #close-navbar {
+    display: block;
   }
 }
 .hero {
