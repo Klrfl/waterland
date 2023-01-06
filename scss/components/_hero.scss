@@ -4,6 +4,7 @@
   padding: 2em;
   color:  $font-color;
   min-height: 100vh;
+  // text-align: center;
   position: relative;
 
   h1{
@@ -25,5 +26,16 @@
 }
 
 .hero-content{
-  max-width: 75ch;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#buka-cta{
+  background: #ddd;
+  text-decoration: none;
+  padding: 2rem;
+  margin: 2rem;
+  color: $font-color--dark;
+  align-self: center;
 }
