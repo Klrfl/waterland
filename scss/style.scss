@@ -1,9 +1,5 @@
 @use '../scss/components';
 
-section{
-  overflow: hidden;
-}
-
-.main-section{
-  padding: 2em;
+body{
+  overflow-x: hidden;
 }
