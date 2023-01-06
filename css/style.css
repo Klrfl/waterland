@@ -27,8 +27,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 #overlay {
-  backdrop-filter: blur(1rem);
-  position: absolute;
+  backdrop-filter: blur(0.3rem);
+  position: fixed;
   inset: 0;
 }
 
@@ -49,6 +49,11 @@ header {
 }
 .contact > * {
   padding: 0.5em;
+}
+
+#contact-tel {
+  color: inherit;
+  text-underline-offset: 0.2rem;
 }
 
 .main-nav {
@@ -141,7 +146,18 @@ header {
 }
 
 .hero-content {
-  max-width: 75ch;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#buka-cta {
+  background: #ddd;
+  text-decoration: none;
+  padding: 2rem;
+  margin: 2rem;
+  color: #222;
+  align-self: center;
 }
 
 footer {
@@ -150,12 +166,20 @@ footer {
   padding: 2em;
 }
 
-section {
-  overflow: hidden;
-}
-
 .main-section {
   padding: 2em;
+}
+
+.infobox {
+  outline: 1px solid #333;
+  padding: 1em;
+}
+.infobox time {
+  font-weight: bold;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
