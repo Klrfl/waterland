@@ -1,8 +1,8 @@
 @use '../abstracts' as *;
 
 #overlay{
-  backdrop-filter: blur(1rem);
-  position: absolute;
+  backdrop-filter: blur(.3rem);
+  position: fixed;
   inset: 0;
 }
 
@@ -24,6 +24,11 @@ header{
   & > *{
     padding: .5em;
   }
+}
+
+#contact-tel{
+  color: inherit;
+  text-underline-offset: .2rem;
 }
 
 .main-nav{
