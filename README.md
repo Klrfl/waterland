@@ -2,7 +2,7 @@
 
 Ini adalah repositori untuk situs web Waterland. (Situs webnya masih dalam pengembangan)
 
-Pratayang langsung tersedia [di sini](https://klrfl.github.io/waterland/).
+Pratayang branch `main` langsung tersedia [di sini](https://klrfl.github.io/waterland/).
 
 ## Teknologi
 
