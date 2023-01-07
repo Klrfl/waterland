@@ -176,12 +176,28 @@ footer {
   padding: 2em;
 }
 
+#informasi {
+  background: #222;
+  color: #eee;
+}
+
 .infobox {
-  outline: 1px solid #333;
+  outline: 1px solid;
   padding: 1em;
 }
 .infobox time {
   font-weight: bold;
+}
+
+#fasilitas {
+  display: flex;
+  flex-wrap: wrap;
+}
+#fasilitas > * {
+  flex: 300px 1 0;
+}
+#fasilitas .fasilitas-text {
+  padding: 1rem;
 }
 
 body {
