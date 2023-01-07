@@ -1,12 +1,33 @@
+@use '../abstracts/' as *;
+
 .main-section{
   padding: 2em;
 }
 
+#informasi{
+  background: #222;
+  color: $font-color;
+}
+
 .infobox{
-  outline: 1px solid #333;
+  outline: 1px solid;
   padding: 1em;
   
   time{
     font-weight: bold;
   }
+}
+
+#fasilitas{
+  display: flex;
+  flex-wrap: wrap;
+
+  & > *{
+    flex: 300px 1 0;
+  }
+
+  .fasilitas-text{
+    padding: 1rem;
+  }
+  
 }
