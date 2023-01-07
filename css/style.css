@@ -49,10 +49,16 @@ header {
 }
 .contact > * {
   padding: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
-
-#contact-tel {
+.contact a {
   color: inherit;
+  text-decoration: none;
+}
+.contact a:hover {
+  text-decoration: underline;
   text-underline-offset: 0.2rem;
 }
 
