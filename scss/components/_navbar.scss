@@ -23,13 +23,22 @@ header{
 
   & > *{
     padding: .5em;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+  }
+
+  a{
+    color: inherit;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+      text-underline-offset: .2rem;
+    }
   }
 }
 
-#contact-tel{
-  color: inherit;
-  text-underline-offset: .2rem;
-}
 
 .main-nav{
   background: white;
