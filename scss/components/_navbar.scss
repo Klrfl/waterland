@@ -13,31 +13,32 @@ header{
   position: sticky;
   top: 0;
   z-index: 2;
-}
-
-.contact{
-  background: rgb(26, 116, 255);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  & > *{
-    padding: .5em;
+  
+  .contact{
+    background: rgb(26, 116, 255);
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    gap: .5em;
-  }
-
-  a{
-    color: inherit;
-    text-decoration: none;
-
-    &:hover{
-      text-decoration: underline;
-      text-underline-offset: .2rem;
+  
+    & > *{
+      padding: .5em;
+      display: flex;
+      align-items: center;
+      gap: .5em;
+    }
+  
+    a{
+      color: inherit;
+      text-decoration: none;
+  
+      &:hover{
+        text-decoration: underline;
+        text-underline-offset: .2rem;
+      }
     }
   }
 }
+
 
 
 .main-nav{
