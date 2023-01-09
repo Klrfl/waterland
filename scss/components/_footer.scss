@@ -4,4 +4,28 @@ footer{
   background: #222;
   color: $font-color;
   padding: 2em;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.contact{
+  outline: 1px solid;
+display: flex;
+  
+.contact-item{
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    gap: .5rem;
+  }
+
+  a{
+    color: inherit;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
 }
