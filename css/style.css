@@ -40,24 +40,23 @@ header {
   top: 0;
   z-index: 2;
 }
-
-.contact {
+header .contact {
   background: rgb(26, 116, 255);
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.contact > * {
+header .contact > * {
   padding: 0.5em;
   display: flex;
   align-items: center;
   gap: 0.5em;
 }
-.contact a {
+header .contact a {
   color: inherit;
   text-decoration: none;
 }
-.contact a:hover {
+header .contact a:hover {
   text-decoration: underline;
   text-underline-offset: 0.2rem;
 }
@@ -170,6 +169,30 @@ footer {
   background: #222;
   color: #eee;
   padding: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact {
+  outline: 1px solid;
+  display: flex;
+}
+.contact .contact-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+.contact a {
+  color: inherit;
+  text-decoration: none;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+
+#map-iframe {
+  min-width: 100%;
 }
 
 .main-section {
