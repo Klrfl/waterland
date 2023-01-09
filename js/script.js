@@ -24,3 +24,39 @@ overlay.addEventListener("click", () => {
   navbar.classList.remove("active");
   overlay.remove();
 });
+
+// highlight nav on scroll
+
+// const mainSection = document.querySelectorAll("main > section");
+// const navItems = document.querySelectorAll(".nav-links-container ul li");
+
+// const mainSectionOptions = {};
+
+// const mainSectionObserver = new IntersectionObserver(function (
+//   entries,
+//   mainSectionObserver
+// ) {
+//   entries.forEach((section) => {
+//     console.log(section.target);
+//     console.log(section.target.getAttribute("id"));
+//   });
+// },
+// mainSectionOptions);
+
+// mainSection.forEach((section) => {
+//   mainSectionObserver.observe(section);
+// });
+
+// window.addEventListener("scroll", () => {
+//   let currentSection = "";
+
+//   mainSection.forEach((section) => {
+//     const sectionTop = section.offsetTop;
+//     // const sectionHeight = section.clientHeight;
+
+//     if (scrollY > sectionTop) {
+//       currentSection = section.getAttribute("id");
+//     }
+//     console.log(currentSection);
+//   });
+// });
