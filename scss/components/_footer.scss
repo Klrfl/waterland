@@ -7,29 +7,42 @@ footer{
 
   display: flex;
   flex-direction: column;
-}
-
-.contact{
-  outline: 1px solid;
-display: flex;
   
-.contact-item{
+  .contact{
+    outline: 1px solid;
     display: flex;
-    align-items: center;
-    padding: .5rem;
-    gap: .5rem;
-  }
-
-  a{
-    color: inherit;
-    text-decoration: none;
-
-    &:hover{
-      text-decoration: underline;
+    flex-direction: column;
+      
+    .contact-item{
+      display: flex;
+      align-items: center;
+      padding: .5rem;
+      gap: .5rem;
+    }
+    
+    a{
+      color: inherit;
+      text-decoration: none;
+    
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
 }
 
+
+.footer__map-container{
+  flex: 1 1 0;
+}
+
 #map-iframe{
   min-width: 100%;
+}
+
+@media screen and (min-width: 50em){
+  footer{
+
+    flex-direction: row;
+  }
 }
