@@ -26,12 +26,6 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-#overlay {
-  backdrop-filter: blur(0.3rem);
-  position: fixed;
-  inset: 0;
-}
-
 header {
   color: #eee;
   display: flex;
@@ -102,6 +96,11 @@ header .contact a:hover {
 }
 
 @media screen and (max-width: 40em) {
+  #overlay {
+    backdrop-filter: blur(0.3rem);
+    position: fixed;
+    inset: 0;
+  }
   #nav-links-container {
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(1rem);
@@ -145,7 +144,7 @@ header .contact a:hover {
   inset: 0;
   filter: brightness(0.4);
   background-color: rgba(0, 0, 0, 0.5);
-  background-image: url(../assets/herobackground.jpg);
+  background-image: url(../assets/image1.jpg);
   background-size: cover;
   background-position: center;
 }
