@@ -227,9 +227,14 @@ footer .contact-item {
 #fasilitas {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 #fasilitas > * {
-  flex: 300px 1 0;
+  flex: 0 1 30em;
+}
+#fasilitas img {
+  margin: auto;
 }
 #fasilitas .fasilitas-text {
   padding: 1rem;

@@ -21,11 +21,17 @@
 #fasilitas{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
   & > *{
-    flex: 300px 1 0;
+    flex: 0 1 30em;
   }
 
+  img{
+    margin: auto;
+  }
+  
   .fasilitas-text{
     padding: 1rem;
   }
