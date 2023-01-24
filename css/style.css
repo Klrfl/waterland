@@ -130,13 +130,28 @@ header .contact a:hover {
 .hero {
   padding: 2em;
   color: #eee;
-  min-height: 100vh;
+  min-height: 80vh;
   position: relative;
 }
-.hero h1 {
+.hero .hero__title {
   font-size: 3rem;
+  animation: animasi-masuk 1500ms ease;
+}
+.hero .hero__subtitle {
+  font-size: 1.5rem;
+  animation: animasi-masuk 3000ms ease;
 }
 
+@keyframes animasi-masuk {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 .hero::before {
   content: "";
   z-index: -1;
@@ -242,6 +257,12 @@ footer .contact-item {
 
 body {
   overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    animation: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
