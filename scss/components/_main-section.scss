@@ -1,7 +1,7 @@
 @use '../abstracts/' as *;
 
 .main-section{
-  padding: 2em;
+  padding: 1rem;
 }
 
 #informasi{
@@ -23,6 +23,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 
   & > *{
     flex: 0 1 30em;
@@ -31,9 +32,10 @@
   img{
     margin: auto;
   }
-  
-  .fasilitas-text{
-    padding: 1rem;
+}
+
+@media screen and (min-width: 50em){
+  .main-section{
+    padding: 2rem;
   }
-  
 }

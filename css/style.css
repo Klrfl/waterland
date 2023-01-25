@@ -223,7 +223,7 @@ footer .contact-item {
   }
 }
 .main-section {
-  padding: 2em;
+  padding: 1rem;
 }
 
 #informasi {
@@ -244,6 +244,7 @@ footer .contact-item {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 #fasilitas > * {
   flex: 0 1 30em;
@@ -251,10 +252,12 @@ footer .contact-item {
 #fasilitas img {
   margin: auto;
 }
-#fasilitas .fasilitas-text {
-  padding: 1rem;
-}
 
+@media screen and (min-width: 50em) {
+  .main-section {
+    padding: 2rem;
+  }
+}
 body {
   overflow-x: hidden;
 }
