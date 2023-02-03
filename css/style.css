@@ -56,7 +56,8 @@ header .contact a:hover {
 }
 
 .main-nav {
-  background: white;
+  background: rgba(255, 255, 255, 0.6666666667);
+  backdrop-filter: blur(0.5rem);
   color: #222;
   display: flex;
   justify-content: space-between;

@@ -34,7 +34,8 @@ header{
 }
 
 .main-nav{
-  background: white;
+  background: #ffffffaa;
+  backdrop-filter: blur(.5rem);
   color: $font-color--dark;
   display: flex;
   justify-content: space-between;
