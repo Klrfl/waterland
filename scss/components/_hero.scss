@@ -3,12 +3,28 @@
 .hero{
   padding: 2em;
   color:  $font-color;
-  min-height: 100vh;
-  // text-align: center;
+  min-height: 80vh;
   position: relative;
 
-  h1{
+  .hero__title{
     font-size: 3rem;
+    animation: animasi-masuk 1500ms ease;
+  }
+  
+  .hero__subtitle{
+    font-size: 1.5rem;
+    animation: animasi-masuk 3000ms ease;
+  }
+}
+
+@keyframes animasi-masuk{
+  0%{
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  100%{
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -20,7 +36,7 @@
   inset: 0;
   filter: brightness(.4);
   background-color: rgb(0, 0, 0, .5);
-  background-image: url(../assets/herobackground.jpg);
+  background-image: url(../assets/image1.jpg);
   background-size: cover;
   background-position: center;
 }

@@ -26,12 +26,6 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-#overlay {
-  backdrop-filter: blur(0.3rem);
-  position: fixed;
-  inset: 0;
-}
-
 header {
   color: #eee;
   display: flex;
@@ -102,6 +96,11 @@ header .contact a:hover {
 }
 
 @media screen and (max-width: 40em) {
+  #overlay {
+    backdrop-filter: blur(0.3rem);
+    position: fixed;
+    inset: 0;
+  }
   #nav-links-container {
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(1rem);
@@ -131,13 +130,28 @@ header .contact a:hover {
 .hero {
   padding: 2em;
   color: #eee;
-  min-height: 100vh;
+  min-height: 80vh;
   position: relative;
 }
-.hero h1 {
+.hero .hero__title {
   font-size: 3rem;
+  animation: animasi-masuk 1500ms ease;
+}
+.hero .hero__subtitle {
+  font-size: 1.5rem;
+  animation: animasi-masuk 3000ms ease;
 }
 
+@keyframes animasi-masuk {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 .hero::before {
   content: "";
   z-index: -1;
@@ -145,7 +159,7 @@ header .contact a:hover {
   inset: 0;
   filter: brightness(0.4);
   background-color: rgba(0, 0, 0, 0.5);
-  background-image: url(../assets/herobackground.jpg);
+  background-image: url(../assets/image1.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -172,31 +186,44 @@ footer {
   display: flex;
   flex-direction: column;
 }
-
-.contact {
-  outline: 1px solid;
+footer .contact {
   display: flex;
+  flex-direction: column;
 }
-.contact .contact-item {
+footer .contact a {
+  color: inherit;
+  text-decoration: none;
+}
+footer .contact a:hover {
+  text-decoration: underline;
+}
+footer .contact-item {
   display: flex;
   align-items: center;
   padding: 0.5rem;
   gap: 0.5rem;
 }
-.contact a {
-  color: inherit;
-  text-decoration: none;
+
+.footer__map-container {
+  flex: 2 1 0;
+  padding: 0.5rem;
 }
-.contact a:hover {
-  text-decoration: underline;
+
+.footer__contact {
+  flex: 1 1 0;
 }
 
 #map-iframe {
   min-width: 100%;
 }
 
+@media screen and (min-width: 50em) {
+  footer {
+    flex-direction: row;
+  }
+}
 .main-section {
-  padding: 2em;
+  padding: 1rem;
 }
 
 #informasi {
@@ -215,16 +242,30 @@ footer {
 #fasilitas {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 #fasilitas > * {
-  flex: 300px 1 0;
+  flex: 0 1 30em;
 }
-#fasilitas .fasilitas-text {
-  padding: 1rem;
+#fasilitas img {
+  margin: auto;
 }
 
+@media screen and (min-width: 50em) {
+  .main-section {
+    padding: 2rem;
+  }
+}
 body {
   overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    animation: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

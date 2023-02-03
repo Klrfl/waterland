@@ -1,11 +1,5 @@
 @use '../abstracts' as *;
 
-#overlay{
-  backdrop-filter: blur(.3rem);
-  position: fixed;
-  inset: 0;
-}
-
 header{
   color: $font-color;
   display: flex;
@@ -38,8 +32,6 @@ header{
     }
   }
 }
-
-
 
 .main-nav{
   background: white;
@@ -85,6 +77,12 @@ header{
 }
 
 @media screen and (max-width: 40em){
+  #overlay{
+    backdrop-filter: blur(.3rem);
+    position: fixed;
+    inset: 0;
+  }
+
   #nav-links-container{
     background: rgb(0, 0, 0, .5);
     backdrop-filter: blur(1rem);
