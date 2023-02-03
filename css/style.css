@@ -225,6 +225,19 @@ footer .contact-item {
 .main-section {
   padding: 1rem;
 }
+.main-section h2 {
+  position: relative;
+  width: fit-content;
+}
+.main-section h2::before {
+  content: "";
+  background: rgb(42, 42, 199);
+  position: absolute;
+  width: 105%;
+  height: 0.2rem;
+  left: -0.1rem;
+  bottom: -0.1rem;
+}
 
 #informasi {
   background: #222;
@@ -247,7 +260,7 @@ footer .contact-item {
   gap: 1rem;
 }
 #fasilitas > * {
-  flex: 0 1 30em;
+  flex: 1 1 35em;
 }
 #fasilitas img {
   margin: auto;
