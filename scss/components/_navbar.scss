@@ -6,7 +6,7 @@ header{
   flex-direction: column;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 5;
   
   .contact{
     background: rgb(26, 116, 255);
@@ -77,18 +77,27 @@ header{
   max-height: 56px;
 }
 
+#overlay{
+  display: none;
+}
+
 @media screen and (max-width: 40em){
   #overlay{
     backdrop-filter: blur(.3rem);
     position: fixed;
     inset: 0;
+    z-index: 4;
+    
+    &.active{
+      display: block;
+    }
   }
+
 
   #nav-links-container{
     background: rgb(0, 0, 0, .5);
     backdrop-filter: blur(1rem);
     color: $font-color;
-    z-index: 5;
     text-align: right;
 
     display: flex;
