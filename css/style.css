@@ -85,9 +85,7 @@ header .contact a:hover {
   padding: 1em;
   display: none;
 }
-
-#open-navbar:hover,
-#close-navbar:hover {
+#open-navbar:hover, #close-navbar:hover {
   background: rgba(0, 0, 0, 0.5);
   color: #eee;
 }
@@ -98,6 +96,7 @@ header .contact a:hover {
 
 #overlay {
   display: none;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 40em) {
