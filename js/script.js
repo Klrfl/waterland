@@ -2,27 +2,22 @@ const openNavbar = document.getElementById("open-navbar");
 const closeNavbar = document.getElementById("close-navbar");
 const navbar = document.getElementById("nav-links-container");
 
-let overlay = document.createElement("div");
-overlay.setAttribute("id", "overlay");
+const overlay = document.getElementById("overlay");
 
 openNavbar.addEventListener("click", () => {
   navbar.classList.toggle("active");
-  if (document.body !== overlay.parentElement) {
-    document.body.append(overlay);
-  } else {
-    overlay.remove();
-  }
+  overlay.classList.toggle("active");
 });
 
 closeNavbar.addEventListener("click", () => {
   navbar.classList.remove("active");
-  overlay.remove();
+  overlay.classList.remove("active");
 });
 
 // when overlay gets clicked, close navbar
 overlay.addEventListener("click", () => {
   navbar.classList.remove("active");
-  overlay.remove();
+  overlay.classList.remove("active");
 });
 
 // highlight nav on scroll

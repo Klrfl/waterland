@@ -6,7 +6,7 @@ header{
   flex-direction: column;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 5;
   
   .contact{
     background: rgb(26, 116, 255);
@@ -34,7 +34,8 @@ header{
 }
 
 .main-nav{
-  background: white;
+  background: #ffffffaa;
+  backdrop-filter: blur(.5rem);
   color: $font-color--dark;
   display: flex;
   justify-content: space-between;
@@ -64,16 +65,20 @@ header{
 #open-navbar, #close-navbar{
   padding: 1em;
   display: none;
-}
-
-#open-navbar:hover,
-#close-navbar:hover{
-  background: rgb(0, 0, 0, .5);
-  color: $font-color;
+  
+  &:hover{
+    background: rgb(0, 0, 0, .5);
+    color: $font-color;
+  }
 }
 
 .logo img{
   max-height: 56px;
+}
+
+#overlay{
+  display: none;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 40em){
@@ -81,13 +86,19 @@ header{
     backdrop-filter: blur(.3rem);
     position: fixed;
     inset: 0;
+    z-index: 4;
+    
+    &.active{
+      display: block;
+      visibility: visible;
+    }
   }
+
 
   #nav-links-container{
     background: rgb(0, 0, 0, .5);
     backdrop-filter: blur(1rem);
     color: $font-color;
-    z-index: 5;
     text-align: right;
 
     display: flex;

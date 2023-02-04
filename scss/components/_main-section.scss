@@ -2,6 +2,20 @@
 
 .main-section{
   padding: 1rem;
+  h2{
+    position: relative;
+    width: fit-content;
+  }
+
+  h2::before{
+    content: '';
+    background: rgb(42, 42, 199);
+    position: absolute;
+    width: 105%;
+    height: .2rem;
+    left: -.1rem;
+    bottom: -.1rem;
+  }
 }
 
 #informasi{
@@ -26,7 +40,7 @@
   gap: 1rem;
 
   & > *{
-    flex: 0 1 30em;
+    flex: 1 1 35em;
   }
 
   img{
