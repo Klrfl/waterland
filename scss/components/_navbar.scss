@@ -9,7 +9,7 @@ header{
   z-index: 5;
   
   .contact{
-    background: rgb(26, 116, 255);
+    background: $accent-color;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -34,7 +34,7 @@ header{
 }
 
 .main-nav{
-  background: #ffffffaa;
+  background: #ffffffdd;
   backdrop-filter: blur(.5rem);
   color: $font-color--dark;
   display: flex;
@@ -52,7 +52,30 @@ header{
       color: inherit;
       padding: 1em;
       display: block;
+      position: relative;
       transition: background-color 200ms ease;
+
+      // &.active{
+      //   backdrop-filter: invert(85%);
+      //   background: #222;
+      //   color: $font-color;
+      // }
+
+      &::before{
+        content: '';
+        background: $accent-color;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        transform: scale(0);
+        height: 3px;
+        transition: transform 200ms ease;
+      }
+
+      &.active::before{
+        transform: scale(1); 
+      }
 
       &:hover{
         background: rgb(0, 0, 0, .8);
