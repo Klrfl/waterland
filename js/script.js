@@ -21,37 +21,36 @@ overlay.addEventListener("click", () => {
 });
 
 // highlight nav on scroll
+const mainSections = document.querySelectorAll(".main-section");
+const navItems = document.querySelectorAll("#nav-links-container ul a");
 
-// const mainSection = document.querySelectorAll("main > section");
-// const navItems = document.querySelectorAll(".nav-links-container ul li");
+const mainSectionOptions = {
+  threshold: 0.4,
+};
 
-// const mainSectionOptions = {};
+const mainSectionObserver = new IntersectionObserver(function (
+  entries,
+  mainSectionObserver
+) {
+  entries.forEach((entry) => {
+    // check if intersecting with viewport
+    if (entry.isIntersecting) {
+      navItems.forEach((navItem) => {
+        let currentSection = document.querySelector(
+          `${navItem.dataset.target}`
+        );
 
-// const mainSectionObserver = new IntersectionObserver(function (
-//   entries,
-//   mainSectionObserver
-// ) {
-//   entries.forEach((section) => {
-//     console.log(section.target);
-//     console.log(section.target.getAttribute("id"));
-//   });
-// },
-// mainSectionOptions);
+        if (currentSection == entry.target) {
+          navItem.classList.add("active");
+        } else {
+          navItem.classList.remove("active");
+        }
+      });
+    }
+  });
+},
+mainSectionOptions);
 
-// mainSection.forEach((section) => {
-//   mainSectionObserver.observe(section);
-// });
-
-// window.addEventListener("scroll", () => {
-//   let currentSection = "";
-
-//   mainSection.forEach((section) => {
-//     const sectionTop = section.offsetTop;
-//     // const sectionHeight = section.clientHeight;
-
-//     if (scrollY > sectionTop) {
-//       currentSection = section.getAttribute("id");
-//     }
-//     console.log(currentSection);
-//   });
-// });
+mainSections.forEach((section) => {
+  mainSectionObserver.observe(section);
+});
