@@ -1,55 +1,55 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
-.main-section{
+.main-section {
   padding: 1rem;
-  h2{
+  h2 {
     position: relative;
     width: fit-content;
   }
-
-  h2::before{
-    content: '';
+  
+  h2::before {
+    content: "";
     background: rgb(42, 42, 199);
     position: absolute;
     width: 105%;
-    height: .2rem;
-    left: -.1rem;
-    bottom: -.1rem;
+    height: 0.2rem;
+    left: -0.1rem;
+    bottom: -0.1rem;
   }
 }
 
-#informasi{
+#informasi {
   background: #222;
   color: $font-color;
 }
 
-.infobox{
+.infobox {
   outline: 1px solid;
   padding: 1em;
-  
-  time{
+
+  time {
     font-weight: bold;
   }
 }
 
-#fasilitas{
+#fasilitas {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 
-  & > *{
+  & > * {
     flex: 1 1 35em;
   }
 
-  img{
+  img {
     margin: auto;
   }
 }
 
-@media screen and (min-width: 50em){
-  .main-section{
+@media screen and (min-width: 50em) {
+  .main-section {
     padding: 2rem;
   }
 }
