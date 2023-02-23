@@ -56,7 +56,7 @@ header .contact a:hover {
 }
 
 .main-nav {
-  background: rgba(255, 255, 255, 0.6666666667);
+  background: rgba(255, 255, 255, 0.8666666667);
   backdrop-filter: blur(0.5rem);
   color: #222;
   display: flex;
@@ -74,7 +74,22 @@ header .contact a:hover {
   color: inherit;
   padding: 1em;
   display: block;
+  position: relative;
   transition: background-color 200ms ease;
+}
+.main-nav ul a::before {
+  content: "";
+  background: rgb(26, 116, 255);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transform: scale(0);
+  height: 3px;
+  transition: transform 200ms ease;
+}
+.main-nav ul a.active::before {
+  transform: scale(1);
 }
 .main-nav ul a:hover {
   background: rgba(0, 0, 0, 0.8);
