@@ -20,6 +20,11 @@ overlay.addEventListener("click", () => {
   overlay.classList.remove("active");
 });
 
+navbar.addEventListener("click", () => {
+  navbar.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
 // highlight nav on scroll
 const mainSections = document.querySelectorAll(".main-section");
 const navItems = document.querySelectorAll("#nav-links-container ul a");
