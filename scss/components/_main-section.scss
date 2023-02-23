@@ -1,12 +1,16 @@
 @use "../abstracts/" as *;
 
+main img{
+  border-radius: .5rem;
+}
+
 .main-section {
   padding: 1rem;
   h2 {
     position: relative;
     width: fit-content;
   }
-  
+
   h2::before {
     content: "";
     background: rgb(42, 42, 199);

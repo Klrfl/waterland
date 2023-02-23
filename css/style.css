@@ -245,6 +245,10 @@ footer .contact-item {
     flex-direction: row;
   }
 }
+main img {
+  border-radius: 0.5rem;
+}
+
 .main-section {
   padding: 1rem;
 }
