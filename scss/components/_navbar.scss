@@ -55,12 +55,6 @@ header{
       position: relative;
       transition: background-color 200ms ease;
 
-      // &.active{
-      //   backdrop-filter: invert(85%);
-      //   background: #222;
-      //   color: $font-color;
-      // }
-
       &::before{
         content: '';
         background: $accent-color;
@@ -87,7 +81,7 @@ header{
 
 #open-navbar, #close-navbar{
   padding: 1em;
-  display: none;
+  display: block;
   
   &:hover{
     background: rgb(0, 0, 0, .5);
@@ -100,51 +94,61 @@ header{
 }
 
 #overlay{
+  backdrop-filter: blur(.3rem);
+  position: fixed;
+  inset: 0;
+  z-index: 4;
+
   display: none;
   visibility: hidden;
+  
+  &.active{
+    display: block;
+    visibility: visible;
+  }
 }
 
-@media screen and (max-width: 40em){
-  #overlay{
-    backdrop-filter: blur(.3rem);
-    position: fixed;
-    inset: 0;
-    z-index: 4;
-    
-    &.active{
-      display: block;
-      visibility: visible;
-    }
+#nav-links-container{
+  background: rgb(0, 0, 0, .5);
+  backdrop-filter: blur(1rem);
+  color: $font-color;
+  text-align: right;
+
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  transform: translateY(calc(-100% - 2.5rem));
+  transition: transform 200ms ease;
+  
+  ul{
+    min-width: 75vw;
+    min-height: 100vh;
+    flex-direction: column;
   }
 
+  &.active{
+    transform: translateY(0);
+  }
+}
+
+@include tablet-vw{
+  #open-navbar, #close-navbar{
+    display: none;
+  }
 
   #nav-links-container{
-    background: rgb(0, 0, 0, .5);
-    backdrop-filter: blur(1rem);
-    color: $font-color;
-    text-align: right;
+    background: transparent;
+    color: $font-color--dark;
+    position: relative;
+    transform: none;
 
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    transform: translateY(calc(-100% - 2.5rem));
-    transition: transform 200ms ease;
-    
     ul{
-      min-width: 75vw;
-      min-height: 100vh;
-      flex-direction: column;
+      min-width: fit-content;
+      min-height: fit-content;
+      flex-direction: row;
     }
-
-    &.active{
-      transform: translateY(0);
-    }
-  }
-
-  #open-navbar, #close-navbar{
-    display: block;
   }
 }
