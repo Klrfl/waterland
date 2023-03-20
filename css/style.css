@@ -247,7 +247,7 @@ footer .contact-item {
   }
 }
 .main-section {
-  padding: 1rem;
+  padding: 2rem;
 }
 .main-section h2 {
   position: relative;
@@ -261,6 +261,9 @@ footer .contact-item {
   height: 0.2rem;
   left: -0.1rem;
   bottom: -0.1rem;
+}
+.main-section img {
+  border-radius: 0.5rem;
 }
 
 #informasi {
@@ -276,23 +279,29 @@ footer .contact-item {
   font-weight: bold;
 }
 
-#fasilitas {
+.fasilitas-subsection {
+  padding-block: 2rem;
+  max-width: 75ch;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-#fasilitas > * {
-  flex: 1 1 35em;
-}
-#fasilitas img {
+.fasilitas-subsection img {
   margin: auto;
 }
 
 @media screen and (min-width: 50em) {
-  .main-section {
-    padding: 2rem;
+  .fasilitas-subsection {
+    max-width: 100%;
+    flex-direction: row;
+  }
+  .fasilitas-subsection img {
+    max-width: 50%;
+  }
+  .fasilitas-subsection--2 img {
+    order: 1;
   }
 }
 body {
