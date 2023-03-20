@@ -13,6 +13,8 @@ main img{
 
   h2::before {
     content: "";
+  h2::before {
+    content: "";
     background: rgb(42, 42, 199);
     position: absolute;
     width: 105%;
@@ -23,13 +25,17 @@ main img{
 }
 
 #informasi {
+#informasi {
   background: #222;
   color: $font-color;
 }
 
 .infobox {
+.infobox {
   outline: 1px solid;
   padding: 1em;
+
+  time {
 
   time {
     font-weight: bold;
@@ -37,15 +43,19 @@ main img{
 }
 
 #fasilitas {
+.fasilitas-subsection {
+  padding-block: 2rem;
+  max-width: 75ch;
+
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 
-  & > * {
-    flex: 1 1 35em;
-  }
+  // & > *{
+  //   flex: 1 1 0;
+  // }
 
   img {
     margin: auto;
@@ -53,7 +63,16 @@ main img{
 }
 
 @media screen and (min-width: 50em) {
-  .main-section {
-    padding: 2rem;
+  .fasilitas-subsection {
+    max-width: 100%;
+    flex-direction: row;
+
+    img {
+      max-width: 50%;
+    }
+
+    &--2 img {
+      order: 1;
+    }
   }
 }
