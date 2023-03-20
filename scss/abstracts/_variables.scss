@@ -1,3 +1,7 @@
 $font-color: #eee;
 $font-color--dark: #222;
 $accent-color: rgb(26, 116, 255);
+
+
+@mixin tablet-vw-sm {min-width: 40em};
+@mixin tablet-vw {min-width: 50em};
