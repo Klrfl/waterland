@@ -1,37 +1,38 @@
 @use '../abstracts' as *;
 
-.hero{
+.hero {
   padding: 2em;
-  color:  $font-color;
+  color: $font-color;
   min-height: 80vh;
   position: relative;
 
-  .hero__title{
+  .hero__title {
     font-size: 3rem;
     animation: animasi-masuk 1500ms ease;
   }
-  
-  .hero__subtitle{
+
+  .hero__subtitle {
     font-size: 1.5rem;
     animation: animasi-masuk 3000ms ease;
   }
 }
 
-@keyframes animasi-masuk{
-  0%{
+@keyframes animasi-masuk {
+  0% {
     opacity: 0;
     transform: translateY(-2rem);
   }
-  100%{
+
+  100% {
     opacity: 1;
     transform: none;
   }
 }
 
-.hero::before{
+.hero::before {
   content: '';
   z-index: -1;
-  
+
   position: absolute;
   inset: 0;
   filter: brightness(.4);
@@ -41,13 +42,13 @@
   background-position: center;
 }
 
-.hero-content{
+.hero-content {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-#buka-cta{
+#buka-cta {
   background: #ddd;
   text-decoration: none;
   padding: 2rem;

@@ -4,9 +4,13 @@ $accent-color: rgb(26, 116, 255);
 
 
 @mixin phone-vw {
-  @media screen and (min-width: 40em){@content};
-};
+  @media screen and (min-width: 40em) {
+    @content
+  }
+}
 
 @mixin tablet-vw {
-  @media screen and (min-width: 50em){@content};
-};
+  @media screen and (min-width: 50em) {
+    @content
+  }
+}
